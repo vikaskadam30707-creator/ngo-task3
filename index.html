@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>NGO Home</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#00c6ff,#0072ff);
+overflow:hidden;
+}
+
+/* Animated Background */
+
+.circle{
+position:absolute;
+border-radius:50%;
+background:rgba(255,255,255,.2);
+animation:float 6s infinite ease-in-out;
+}
+
+.c1{
+width:250px;
+height:250px;
+top:50px;
+left:50px;
+}
+
+.c2{
+width:180px;
+height:180px;
+bottom:50px;
+right:50px;
+animation-delay:2s;
+}
+
+.c3{
+width:120px;
+height:120px;
+top:70%;
+left:20%;
+animation-delay:4s;
+}
+
+@keyframes float{
+50%{
+transform:translateY(-40px);
+}
+}
+
+/* Main Box */
+
+.box{
+width:500px;
+padding:40px;
+text-align:center;
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(20px);
+border-radius:30px;
+box-shadow:0 20px 50px rgba(0,0,0,.3);
+animation:zoom 1s;
+}
+
+@keyframes zoom{
+from{
+opacity:0;
+transform:scale(.5);
+}
+to{
+opacity:1;
+transform:scale(1);
+}
+}
+
+/* NGO Image */
+
+.ngo-img{
+width:180px;
+height:180px;
+border-radius:50%;
+object-fit:cover;
+box-shadow:0 10px 30px rgba(0,0,0,.4);
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+50%{
+transform:scale(1.08);
+}
+}
+
+h1{
+margin-top:20px;
+font-size:42px;
+color:white;
+}
+
+p{
+color:white;
+font-size:20px;
+margin:15px 0 25px;
+}
+
+/* Buttons */
+
+button{
+width:100%;
+padding:15px;
+margin-top:12px;
+border:none;
+border-radius:30px;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+background:white;
+color:#0072ff;
+transition:.4s;
+}
+
+button:hover{
+transform:scale(1.05);
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+a{
+text-decoration:none;
+}
+
+footer{
+margin-top:20px;
+color:white;
+font-size:14px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="circle c1"></div>
+<div class="circle c2"></div>
+<div class="circle c3"></div>
+
+<div class="box">
+
+<img class="ngo-img"
+src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=500">
+
+<h1>🌍 NGO Management</h1>
+
+<p>Helping People • Changing Lives ❤️</p>
+
+<a href="/login">
+<button>🔐 Login / Register</button>
+</a>
+
+<a href="/about">
+<button>ℹ️ About NGO</button>
+</a>
+
+<a href="/contact">
+<button>📞 Contact Us</button>
+</a>
+
+<footer>
+© 2026 NGO Management System<br>
+Created By Vikas Kadam
+</footer>
+
+</div>
+
+</body>
+</html>
